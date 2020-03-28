@@ -53,3 +53,6 @@ Intermediate
 *.iobj
 *.ipdb
 *.idb
+
+Debug
+Release
