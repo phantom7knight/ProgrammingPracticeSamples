@@ -30,3 +30,26 @@
 *.exe
 *.out
 *.app
+
+# extern folder
+extern
+D3D11
+Metal
+
+
+# visual studio files
+*.suo
+*.db
+*.opendb
+*.vs
+
+*.tlog
+Intermediate
+
+*.exp
+*.ilk
+*.log
+*.pdb
+*.iobj
+*.ipdb
+*.idb
