@@ -141,7 +141,7 @@
     <ClInclude Include="Helper Functions\Helper.hpp" />
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="Code\Interview Questions\ParkingSystem.cpp" />
+    <ClCompile Include="Code\Data Structures\LinkedList\RemoveElementsinList.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

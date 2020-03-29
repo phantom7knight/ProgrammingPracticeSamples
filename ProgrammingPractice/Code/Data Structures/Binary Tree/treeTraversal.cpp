@@ -1,5 +1,5 @@
 #if 1
-#include "../../stdafx.h"
+#include "../../../Helper Functions/Helper.hpp"
 #endif
 
 //==============================================
@@ -92,9 +92,9 @@ void InOrderTraversal(TreeNode* rootNode)
 	return;
 }
 
-//		  1
+//		  3
 //		   \
-//      3 - 2
+//      1 - 2
 void PostOrderTraversal(TreeNode* rootNode)
 {
 	//traverse whole list
@@ -102,14 +102,12 @@ void PostOrderTraversal(TreeNode* rootNode)
 	{
 		return;
 	}
-	else
-	{
-		STDPRINTLINE(rootNode->data << " ");
-	}
+	
+	PostOrderTraversal(rootNode->ltree);
 
 	PostOrderTraversal(rootNode->rtree);
 
-	PostOrderTraversal(rootNode->ltree);
+	STDPRINTLINE(rootNode->data << " ");
 
 	return;
 }
@@ -117,19 +115,19 @@ void PostOrderTraversal(TreeNode* rootNode)
 
 int main()
 {
-	TreeNode* rootNode = InsertNode(25);
+	TreeNode* rootNode = InsertNode(1);
 
 	//left tree of root node
-	rootNode->ltree = InsertNode(10);
+	rootNode->ltree = InsertNode(2);
 
-	rootNode->ltree->ltree = InsertNode(22);
-	rootNode->ltree->rtree = InsertNode(24);
+	rootNode->ltree->ltree = InsertNode(4);
+	rootNode->ltree->rtree = InsertNode(5);
 
 	//right tree of root node
-	rootNode->rtree = InsertNode(12);
+	rootNode->rtree = InsertNode(3);
 
-	rootNode->rtree->ltree = InsertNode(40);
-	rootNode->rtree->rtree = InsertNode(244);
+	//rootNode->rtree->ltree = InsertNode(40);
+	//rootNode->rtree->rtree = InsertNode(244);
 
 	STDPRINTLINE("==============================================");
 	PreorderTraversal(rootNode);
