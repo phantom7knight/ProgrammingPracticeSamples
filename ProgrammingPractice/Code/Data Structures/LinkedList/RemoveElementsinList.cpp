@@ -1,6 +1,5 @@
 #include "../../../Helper Functions/Helper.hpp"
 
-
 struct Node
 {
 	Node* next = NULL;
@@ -19,7 +18,7 @@ struct Node
 
 };
 
-void AddNode(Node** a_node, const int data)
+void AddNode(Node** a_node, const int data, Node** a_temp)
 {
 	Node* new_node = NULL;
 
@@ -32,7 +31,8 @@ void AddNode(Node** a_node, const int data)
 		new_node->next = NULL;
 
 		*a_node = new_node;
-
+		*a_temp = new_node;
+		
 		return;
 	}
 
@@ -45,7 +45,7 @@ void AddNode(Node** a_node, const int data)
 		if (temp_node->next == NULL)
 		{
 			temp_node->next = new_node;
-
+			*a_temp = temp_node;
 			return;
 		}
 
@@ -76,21 +76,36 @@ Node* RemoveMultiples(Node* head, int a_key)
 {
 	Node* newList = NULL;
 
-	Node* temp = newList;
+	Node* temp = NULL;
+	//Node* prev = NULL;
 
 	if (head == NULL)
 		return NULL;
 
 	while (head != NULL)
 	{
-		if (newList == NULL)
+		if (newList == NULL && head->data != a_key)
 		{
-			AddNode(&newList, head->data);
+			AddNode(&newList, head->data, &temp);
+			//temp = newList;
+		}
+
+		if (head->data == a_key)
+		{
+			if (head->next->next->data != a_key)
+			{
+				temp->next = head->next;
+				temp = temp->next;
+			}
+		}
+		else
+		{
+			AddNode(&newList, head->data,&temp);
+			//temp = 
 		}
 
 
-
-
+		//go to the next node
 		head = head->next;
 	}
 
@@ -108,16 +123,17 @@ Node* RemoveMultiples(Node* head, int a_key)
 int main()
 {
 	Node* head = NULL;
+	Node* lastNode = NULL;
 
 	//adding examples
-	AddNode(&head, 10);
-	AddNode(&head, 20);
-	AddNode(&head, 30);
-	AddNode(&head, 40);
-	AddNode(&head, 50);
-	AddNode(&head, 30);
-	AddNode(&head, 60);
-	AddNode(&head, 20);
+	AddNode(&head, 10, &lastNode);
+	AddNode(&head, 20, &lastNode);
+	AddNode(&head, 30, &lastNode);
+	AddNode(&head, 40, &lastNode);
+	AddNode(&head, 50, &lastNode);
+	AddNode(&head, 30, &lastNode);
+	//AddNode(&head, 60);
+	//AddNode(&head, 20);
 
 	PrintList(head);
 

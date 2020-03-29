@@ -20,7 +20,7 @@
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="Code\Data Structures\LinkedList\RemoveElementsinList.cpp">
+    <ClCompile Include="Code\Data Structures\LinkedList\BinaryNumLinkedList.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
