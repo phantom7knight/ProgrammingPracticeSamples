@@ -1,9 +1,9 @@
 
-/*#include "../../stdafx.h"
+#include "../../stdafx.h"
 
-//=================================================================================================
-//Binary Tree Implementation
-//=================================================================================================
+=================================================================================================
+Binary Tree Implementation
+=================================================================================================
 struct TreeNode
 {
 	struct TreeNode* ltree;
@@ -49,7 +49,7 @@ int main()
 
 
 
-	//Delete the whole tree
+	Delete the whole tree
 	DeleteNode(rootNode->ltree);
 	DeleteNode(rootNode->rtree);
 	DeleteNode(rootNode);
@@ -57,7 +57,3 @@ int main()
 
 	return 0;
 }
-
-
-
-*/
