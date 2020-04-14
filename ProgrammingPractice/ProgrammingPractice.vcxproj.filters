@@ -18,5 +18,8 @@
     <ClInclude Include="Helper Functions\Helper.hpp">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="Helper Functions\LinkedListHelper.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
 </Project>
