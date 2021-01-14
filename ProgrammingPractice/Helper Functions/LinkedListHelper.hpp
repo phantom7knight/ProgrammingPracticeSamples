@@ -1,22 +1,15 @@
-#include "../../../Helper Functions/Helper.hpp"
-
+#include "Helper.hpp"
 
 struct Node
 {
 	Node* next = NULL;
 	int data = 0;
 
+	Node() : data(0), next(NULL){}
 
-	Node() : data(0), next(NULL)
-	{
+	Node(int a_data) : data(a_data), next(NULL){}
 
-	}
-
-	Node(int a_data) : data(a_data), next(NULL)
-	{
-
-	}
-
+	Node(int x, Node* next) : data(x), next(next) {}
 };
 
 void AddNode(Node** a_node, const int data)
@@ -53,6 +46,48 @@ void AddNode(Node** a_node, const int data)
 	}
 
 
+	return;
+}
+
+void DeleteNode(Node** a_node, const int a_key)
+{
+	Node* temp = *a_node;
+	Node* prev = NULL;
+
+	//check if the list is empty
+	if (*a_node == NULL)
+	{
+		STDPRINTLINE("The list is empty so nothing to delete here");
+		return;
+	}
+
+	//traverse the list till we find the node
+	while (temp != NULL)
+	{
+		if (temp->data == a_key)
+		{
+			//We found the node and now we do operation
+
+			Node* remove_node = temp;
+			temp = temp->next;
+
+			if (prev != NULL)
+				prev->next = temp;
+
+
+			//delete this node
+			delete remove_node;
+
+			return;
+		}
+		else
+		{
+			//we didn't find the node so go to next node
+			prev = temp;
+			temp = temp->next;
+		}
+
+	}
 	return;
 }
 

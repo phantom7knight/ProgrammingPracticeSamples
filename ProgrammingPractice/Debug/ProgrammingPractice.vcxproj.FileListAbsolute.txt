@@ -1,2 +1,4 @@
 D:\DIGIPEN\Other stuff\ProgrammingPracticeSamples\ProgrammingPractice\Debug\ProgrammingPractice.exe
 D:\DIGIPEN\Other stuff\ProgrammingPracticeSamples\ProgrammingPractice\Debug\ProgrammingPractice.pdb
+F:\DIGIPEN\Other stuff\ProgrammingPracticeSamples\ProgrammingPractice\Debug\ProgrammingPractice.exe
+F:\DIGIPEN\Other stuff\ProgrammingPracticeSamples\ProgrammingPractice\Debug\ProgrammingPractice.pdb
