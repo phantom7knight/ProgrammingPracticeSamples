@@ -141,9 +141,6 @@
     <ClInclude Include="Helper Functions\Helper.hpp" />
     <ClInclude Include="Helper Functions\LinkedListHelper.hpp" />
   </ItemGroup>
-  <ItemGroup>
-    <ClCompile Include="Code\Interview Questions\TwoSum.cpp" />
-  </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
   </ImportGroup>
