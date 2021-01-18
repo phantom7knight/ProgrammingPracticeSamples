@@ -23,7 +23,7 @@
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="Code\C++ Learning\Arrays\ValidSudoku.cpp">
+    <ClCompile Include="Code\C++ Learning\Strings\ValidAnagram.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>

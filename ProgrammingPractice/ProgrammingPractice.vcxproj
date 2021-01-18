@@ -142,7 +142,7 @@
     <ClInclude Include="Helper Functions\LinkedListHelper.hpp" />
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="Code\C++ Learning\Arrays\ValidSudoku.cpp" />
+    <ClCompile Include="Code\C++ Learning\Strings\ValidAnagram.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
