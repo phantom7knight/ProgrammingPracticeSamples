@@ -142,7 +142,7 @@
     <ClInclude Include="Helper Functions\LinkedListHelper.hpp" />
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="Code\C++ Learning\Dynamic Programming\Fibnocci.cpp" />
+    <ClCompile Include="Code\C++ Learning\LinkedList\IsPalindrome.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

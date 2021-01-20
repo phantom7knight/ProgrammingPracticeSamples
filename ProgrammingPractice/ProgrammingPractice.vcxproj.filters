@@ -23,7 +23,7 @@
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="Code\C++ Learning\Dynamic Programming\Fibnocci.cpp">
+    <ClCompile Include="Code\C++ Learning\LinkedList\IsPalindrome.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>

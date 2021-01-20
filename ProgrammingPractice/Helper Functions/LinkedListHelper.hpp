@@ -12,83 +12,73 @@ struct Node
 	Node(int x, Node* next) : data(x), next(next) {}
 };
 
-void AddNode(Node** a_node, const int data)
+struct ListNode
 {
-	Node* new_node = NULL;
+    int val;
+    ListNode* next;
+    ListNode() : val(0), next(nullptr) {}
+    ListNode(int x) : val(x), next(nullptr) {}
+    ListNode(int x, ListNode* next) : val(x), next(next) {}
+};
 
-	Node* temp_node = *a_node;
+void AddNode(ListNode** head, int val)
+{
+    ListNode* newNode = new ListNode(val);
 
-	//This is the first head 
-	if (*a_node == NULL)
-	{
-		new_node = new Node(data);
-		new_node->next = NULL;
+    // check if this is the first node
+    if (*head == NULL)
+    {
+        *head = newNode;
+        return;
+    }
 
-		*a_node = new_node;
+    // find the last node to add this n
+    ListNode* temp = *head;
+    while (temp->next != NULL)
+    {
+        temp = temp->next;
+    }
 
-		return;
-	}
+    temp->next = newNode;
 
-
-	new_node = new Node(data);
-
-	//find the end of the list to add the list
-	while (temp_node != NULL)
-	{
-		if (temp_node->next == NULL)
-		{
-			temp_node->next = new_node;
-
-			return;
-		}
-
-		temp_node = temp_node->next;
-	}
-
-
-	return;
+    return;
 }
 
-void DeleteNode(Node** a_node, const int a_key)
+void AddNode(ListNode** head, ListNode* newNode)
 {
-	Node* temp = *a_node;
-	Node* prev = NULL;
+    // check if this is the first node
+    if (*head == NULL)
+    {
+        *head = newNode;
+        return;
+    }
 
-	//check if the list is empty
-	if (*a_node == NULL)
-	{
-		STDPRINTLINE("The list is empty so nothing to delete here");
-		return;
-	}
+    // find the last node to add this n
+    ListNode* temp = *head;
+    while (temp->next != NULL)
+    {
+        temp = temp->next;
+    }
 
-	//traverse the list till we find the node
-	while (temp != NULL)
-	{
-		if (temp->data == a_key)
-		{
-			//We found the node and now we do operation
+    temp->next = newNode;
 
-			Node* remove_node = temp;
-			temp = temp->next;
+    return;
+}
 
-			if (prev != NULL)
-				prev->next = temp;
+void deleteNode(ListNode* node)
+{
+    if (node == nullptr)
+    {
+        // do nothing
+        return;
+    }
 
+    ListNode* nextNode = node->next;
 
-			//delete this node
-			delete remove_node;
+    node->val = nextNode->val;
+    node->next = nextNode->next;
 
-			return;
-		}
-		else
-		{
-			//we didn't find the node so go to next node
-			prev = temp;
-			temp = temp->next;
-		}
-
-	}
-	return;
+    delete nextNode;
 }
 
 
