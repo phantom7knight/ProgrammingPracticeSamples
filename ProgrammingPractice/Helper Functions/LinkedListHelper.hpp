@@ -1,5 +1,7 @@
 #include "Helper.hpp"
 
+// DON'T USE THIS!!!
+#pragma region NOT_IN_USE
 struct Node
 {
 	Node* next = NULL;
@@ -11,6 +13,7 @@ struct Node
 
 	Node(int x, Node* next) : data(x), next(next) {}
 };
+#pragma endregion
 
 struct ListNode
 {
@@ -81,18 +84,14 @@ void deleteNode(ListNode* node)
     delete nextNode;
 }
 
-
-void PrintList(Node* head)
+void PrintList(ListNode* head)
 {
-	STDPRINTLINE("Printing list here");
-
+	STDPRINTLINE("Printing list: ");
 
 	while (head != NULL)
 	{
-		STDPRINTLINE(head->data);
+		STDPRINTLINE(head->val);
 		head = head->next;
 	}
-
 	return;
 }
-

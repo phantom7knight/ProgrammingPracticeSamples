@@ -87,6 +87,7 @@
       <SDLCheck>true</SDLCheck>
       <PreprocessorDefinitions>_DEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
+      <LanguageStandard>stdcpp17</LanguageStandard>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
@@ -99,6 +100,7 @@
       <SDLCheck>true</SDLCheck>
       <PreprocessorDefinitions>_DEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
+      <LanguageStandard>stdcpp17</LanguageStandard>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
@@ -138,11 +140,17 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClInclude Include="Code\Octree\Octree.h" />
+    <ClInclude Include="Code\Octree\OctreePoint.h" />
+    <ClInclude Include="Code\Octree\Stopwatch.h" />
+    <ClInclude Include="Code\Octree\Vec3.h" />
+    <ClInclude Include="Helper Functions\BenchmarkHelper.hpp" />
+    <ClInclude Include="Helper Functions\BinaryTreeHelper.hpp" />
     <ClInclude Include="Helper Functions\Helper.hpp" />
     <ClInclude Include="Helper Functions\LinkedListHelper.hpp" />
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="Code\C++ Learning\LinkedList\IsPalindrome.cpp" />
+    <ClCompile Include="Code\Octree\main.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

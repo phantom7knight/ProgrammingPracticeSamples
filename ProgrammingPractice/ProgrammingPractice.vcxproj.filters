@@ -21,9 +21,27 @@
     <ClInclude Include="Helper Functions\LinkedListHelper.hpp">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="Helper Functions\BinaryTreeHelper.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Helper Functions\BenchmarkHelper.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Code\Octree\Octree.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Code\Octree\OctreePoint.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Code\Octree\Stopwatch.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Code\Octree\Vec3.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="Code\C++ Learning\LinkedList\IsPalindrome.cpp">
+    <ClCompile Include="Code\Octree\main.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>

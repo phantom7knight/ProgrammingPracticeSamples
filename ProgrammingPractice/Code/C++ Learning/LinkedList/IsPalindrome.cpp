@@ -33,8 +33,11 @@ bool isPalindrome(ListNode* head)
 #endif // BadSoln
 
 #ifdef GoodSoln
+// add O(1) and O(n) solution
 bool isPalindrome(ListNode* head)
 {
+
+
 
 	return true;
 }
